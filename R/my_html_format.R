@@ -10,10 +10,11 @@ my_html_format = function(toc = TRUE, ...) {
 
   # locations of resource files in the package
   pkg_resource = function(...) {
-    system.file(..., package = "MyTemplates")
+    system.file(..., package = "MyReports")
   }
 
   css    = pkg_resource("rmarkdown/resources/styles.css")
+  header = pkg_resource("rmarkdown/resources/header.html")
   footer = pkg_resource("rmarkdown/resources/footer.html")
 
   # call the base html_document function
@@ -26,7 +27,7 @@ my_html_format = function(toc = TRUE, ...) {
     code_folding = "show",
     css = css,
     number_sections = TRUE,
-    includes = rmarkdown::includes(after_body = footer),
+    includes = rmarkdown::includes(before_body = header, after_body = footer),
     ...
   )
 }
