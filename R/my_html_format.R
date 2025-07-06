@@ -21,8 +21,8 @@ my_html_format = function(toc = TRUE, ...) {
   rmarkdown::html_document(
     toc = toc,
     toc_float = TRUE,
-    fig_width = 6.5,
-    fig_height = 4,
+    fig_width = 8,
+    fig_height = 6,
     theme = "lumen",
     code_folding = "show",
     css = css,

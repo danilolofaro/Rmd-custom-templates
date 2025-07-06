@@ -3,7 +3,7 @@ title: "Custom R Markdown Documents"
 author: ""
 date: ""
 output:
-  MyTemplates::my_html_format:
+  MyReports::my_html_format:
     toc: true
 ---
 
